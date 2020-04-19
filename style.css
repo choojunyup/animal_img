@@ -1,14 +1,12 @@
 body {
   font-family: sans-serif;
-  background-color: #ffffff;
+  background-color: #333;
 }
 
 .file-upload {
-    padding: 15% 3%;
+    padding: 3% 3%;
     margin: 0 auto;
-    border-radius: 10px;
-    border: solid 1.5px #f6f7fa;
-    background-color: #f6f7fa;
+    background-color: #555;
 }
 
 .file-upload-btn {
@@ -27,7 +25,7 @@ body {
 }
 
 .file-upload-btn:hover {
-  background: #1AA059;
+  background: #1AA088;
   color: #ffffff;
   transition: all .2s ease;
   cursor: pointer;
@@ -39,6 +37,11 @@ body {
 }
 
 .file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.image-stream-content {
   display: none;
   text-align: center;
 }
@@ -55,19 +58,25 @@ body {
 }
 
 .image-upload-wrap {
-    width: 60%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 5px auto;
     position: relative;
+    
+}
+
+.btn-upload{
+    display: inline-block;
     object-fit: contain;
+    margin: 5px auto;
     border-radius: 10px;
-    border: dashed 1.5px #35465d;
-    background-color: #ffffff;
+    border: solid 3px #aaa;
+    background-color: #777;
 }
 
 .image-dropping,
-.image-upload-wrap:hover {
+.btn-upload:hover {
     background-color: #35465d82;
-    border: 1.5px dashed #ffffff;
+    border: solid 3px #aaa;
 }
 
 .image-title-wrap {
@@ -85,9 +94,11 @@ body {
 }
 
 .file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
+  max-height: 300px;
+  max-width: 300px;
   margin: auto;
+  border-radius: 20px;
+  border: solid 3px #aaa;
   padding: 20px;
 }
 
@@ -134,21 +145,21 @@ body {
 }
 
 .section {
-    margin-top: 100px;
+    margin-top: 40px;
 }
 
 .title {
   font-family: NanumSquareR;
   line-height: 1.67;
   text-align: center;
-  color: #35465d;
+  color: #eee;
 }
 
 .subtitle {
   font-family: NanumSquareR;
   line-height: 1.53;
   text-align: center;
-  color: #35465d;
+  color: #eee;
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -161,76 +172,150 @@ body {
     }
 }
 
-
-.youtube-link {
-    font-family: NanumSquareR;
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
+.try-again-btn{
+  margin: 10px auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: #fff;
 }
 
-.youtube-link:hover {
-    font-family: NanumSquareR;
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
+.again-text{
+  font-family: NanumSquareR;
+  font-size: 40px;
+  top:15px;
+  text-align: center;
+  color: #444;
 
-.youtube-icon {
-    width: 8%;
 }
 
 .upload {
     width: 20%;
 }
 
-.upload-text {
-    width: 58%;
-    font-family: NanumSquareR;
-    font-size: 1.5rem;
-    line-height: 1.53;
-    text-align: center;
-    color: #35465d;
-    margin: 0 auto;
+.gender-box{
+    margin: 10px auto;
+    width: 200px;
+    height: 60px;
+    padding: 5px;
+    border-radius: 60px;
+    background-color: #fff;
+}
+
+.w-img{
+  height: 50px;
+  margin-right: 10px;
+}
+
+.m-img{
+  height: 50px;
+  margin-left: 10px;
+}
+
+.switch-box{
+  margin-top: 5px;
+  position: relative;
+}
+
+.text-center{
+  color:#fff;
+  font-size: 30px;
+  margin:10px;
+}
+
+.animal-title{
+  color:#fff;
+  font-size: 30px;
+  margin:10px;
+}
+
+.animal-explain{
+  color:#fff;
+  font-size: 20px;
+  margin:10px;
+}
+
+input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 80px;
+  height: 40px;
+  background: #ffc0cb;
+  border-radius: 100px;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #50bcdf;
+}
+
+input:checked + label:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 70px;
+}
+
+// centering
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 
+.dog-box{
+  background-color: #f55;
+  border: solid 3px #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
 
+.cat-box{
+  background-color: #5a5;
+  border: solid 3px #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
 
+.animal-label{
+  color : #fff;
+  font-size: 20px;
+}
 
+.percent-text{
+  color : #fff;
+  font-size: 20px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.upload-text {
+    width: 58%;
+    font-family: NanumSquareR;
+    font-size: 2rem;
+    line-height: 1.53;
+    text-align: center;
+    color: #eee;
+    margin: 0 auto;
+}
