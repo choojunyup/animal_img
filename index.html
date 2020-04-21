@@ -175,8 +175,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
     <script>
 
-        var mobilecam = document.getElementById('mobile-camera');
-        var webcam = document.getElementById('web-camera');
+        var mobilecamera = document.getElementById('mobile-camera');
+        var webcamera = document.getElementById('web-camera');
 
         var player = document.getElementById('player'); 
         var snapshotCanvas = document.getElementById('snapshot');
@@ -187,11 +187,11 @@
 
         var device_ = device();
         if(device_=="android"||device_=="android"){
-            mobilecam.style.display="";
-            webcam.style.display="none";
+            mobilecamera.style.display="";
+            webcamera.style.display="none";
         }else{
-            mobilecam.style.display="none";
-            webcam.style.display="";
+            mobilecamera.style.display="none";
+            webcamera.style.display="";
         }
 
         var handleSuccess = function(stream) {
