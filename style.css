@@ -255,6 +255,11 @@ body {
   margin:10px;
 }
 
+.footer{
+  height: 200px;
+}
+
+
 input[type=checkbox]{
   height: 0;
   width: 0;
