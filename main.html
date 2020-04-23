@@ -310,15 +310,17 @@
 
     <script type="text/javascript">
         let URL;
-        const urlMale = "model/";
-        const urlFemale = "model/";
+        const urlMale = "Male_model/";
+        const urlFemale = "Female_model/";
         let model, webcam, labelContainer, maxPredictions;
 
         async function init() {
             if (document.getElementById("gender").checked) {
                 URL = urlMale;
+                //alert("male");
             } else {
                 URL = urlFemale;
+                //alert("female");
             }
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
